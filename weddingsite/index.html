@@ -36,7 +36,6 @@
 
     async function isFirstPage() {
       const { sTop, offH, restO, mod } = await getMovimentValues();
-      console.log('mod:', mod)
       return mod == 0;
     }
 
@@ -52,8 +51,6 @@
       if (mod > lastPage + 1) {
         lastPage = mod;
       }
-
-      console.log('FistPage: ', await isFirstPage(), 'LastPage: ', await isLastPage())
 
       if (lastStop < sTop) {
         if (restO > 150) {
@@ -74,7 +71,6 @@
 
       body = document.getElementsByTagName('body')[0]
       if (!!body) {
-        console.log('listening')
         body.addEventListener('scroll', captureScroll);
       } else {
         setTimeout(addScrollEvent, 1000);

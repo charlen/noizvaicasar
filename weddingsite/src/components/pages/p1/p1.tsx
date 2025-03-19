@@ -15,7 +15,7 @@ interface dateInterface {
 }
 
 function gotoGiftList() {
-    const url = 'https://www.mercadolivre.com.br/presentes/charlen-e-mirla-z4cwt';
+    const url = 'https://www.mercadolivre.com.br/presentes/charlen-e-mirla-z4cwt?utm_source=link_criado&utm_medium=social';
     window.open(url, '_blank');
 }
 
