@@ -1,0 +1,14 @@
+.p3 {
+    background-image: url('/images/p3_lg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width: 768px) {
+    .p3 {
+        background-image: url('/images/p3_md.jpg');
+        background-size: cover;
+        background-position: 70%;
+
+    }
+}

@@ -1,0 +1,13 @@
+.p2 {
+    background-image: url('/images/p2_lg.jpg');
+    background-size: contain;
+    background-position: center;
+}
+
+@media screen and (max-width: 768px) {
+    .p2 {
+        background-image: url('/images/p2_md.jpg');
+        background-size: cover;
+
+    }
+}

@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.date {
+    font-size: 6rem;
+}
+.date > div{
+    min-width: 100px;
+    padding: 1rem;
+    margin: 1rem;
+}

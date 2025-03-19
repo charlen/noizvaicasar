@@ -1,0 +1,16 @@
+.header {
+    background-image: url('/images/capa_lg.jpg');
+    background-size: cover;
+    background-position: 0% 70%;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        background-image: url('/images/capa_md.jpg');
+        background-position: 0 0;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}

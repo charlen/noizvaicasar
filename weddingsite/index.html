@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ptbr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#7D4717">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mirla & Charlen</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+  <script lang="javascript">
+
+    let lastStop = 0;
+    let lastPage = 0;
+    async function isWaitingUp() {
+      if (lastStop > 0 && document.body.scrollTop >= lastStop) {
+        return false
+      } else {
+        return true
+      }
+    }
+
+    async function getMovimentValues() {
+      const sTop = await document.body.scrollTop;
+      const offH = await window.innerHeight;
+      const restO = sTop % offH;
+      const mod = await Math.floor(sTop / offH);
+
+      return {
+        sTop: sTop, offH: offH, restO: restO, mod: mod
+      }
+    }
+
+    async function isFirstPage() {
+      const { sTop, offH, restO, mod } = await getMovimentValues();
+      console.log('mod:', mod)
+      return mod == 0;
+    }
+
+    async function isLastPage() {
+      const { sTop, offH, restO, mod } = await getMovimentValues();
+      return mod >= lastPage - 1;
+    }
+
+    async function captureScroll(e) {
+
+      const { sTop, offH, restO, mod } = await getMovimentValues();
+
+      if (mod > lastPage + 1) {
+        lastPage = mod;
+      }
+
+      console.log('FistPage: ', await isFirstPage(), 'LastPage: ', await isLastPage())
+
+      if (lastStop < sTop) {
+        if (restO > 150) {
+          const moveTo = (mod * offH) + offH;
+          await document.body.scrollTo({ top: moveTo, left: 0, behavior: "smooth" });
+        }
+      } else {
+        // if (restO < (offH - 150) && mod < lastPage) {
+        //   const moveTo = (mod * offH);
+        //   await document.body.scrollTo({ top: moveTo, left: 0, behavior: "smooth" });
+        // }
+      }
+
+      lastStop = document.body.scrollTop;
+    }
+
+    function addScrollEvent() {
+
+      body = document.getElementsByTagName('body')[0]
+      if (!!body) {
+        console.log('listening')
+        body.addEventListener('scroll', captureScroll);
+      } else {
+        setTimeout(addScrollEvent, 1000);
+      }
+    }
+
+    addScrollEvent();
+
+  </script>
+</body>
+
+</html>
