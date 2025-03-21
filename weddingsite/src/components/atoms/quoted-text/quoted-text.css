@@ -58,12 +58,14 @@
     font-style: italic;
     width: 100%;
     color: #F9F9F9;
+    margin-top: 1rem;
     margin-bottom: 1rem;
     display: block;
 }
 
 @media screen and (max-width: 768px) {
     .quoted-text > p {
+        line-height: 1.2rem;
         padding-bottom: 0.5rem;
     }
     
