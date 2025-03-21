@@ -1,30 +1,37 @@
+import QuotedText from "../../atoms/quoted-text/quoted-text";
 import ScreenBlock from "../../atoms/screenblock/screenblock";
+import SepiaMask from "../../atoms/sepia-mask/sepia-mask";
+import TextBlock from "../../atoms/text-block/text-block";
 import './p2.css'
 
-export default function P2(){
+export default function P2() {
     return <>
-            <ScreenBlock className='screenbox p2 flex flex-col'>
-                <div className='lg:text-2xl sm:text-sm font-bold flex flex-1/2 flex-col lg:w-[50%] bg-[rgba(0,0,0,0.50)] p-5 '>
-                <div className=''> Nosso Convite Especial</div>
+        <ScreenBlock className='screenbox p2 flex flex-col'>
+            <SepiaMask>
+                <QuotedText className="text-justify text-lg lg:text-1xl p-0 max-w-[800px] lg:p-8 sm:p-0">
+                    <TextBlock className="text-left destaque white-text lg:text-8xl pb-[1rem] w-full">Nosso Convite Especial</TextBlock>
+                    
                     <p className='white-text'>
-                        Você está convidado(a) a participar do maior capítulo da nossa vida...
+                    <span className="big-quotes text-left">"</span>Você está convidado a participar do maior capítulo da nossa história, a nossa festa e cerimônia de casamento.
                     </p>
                     <p className='white-text'>
-                        Se você está recebendo esse convite, é porque você faz parte da nossa história. Dentro de tantas pessoas incríveis, você foi selecionada para o momento mais importante da nossa vida.
-                    </p>                    
+                        Se você está recebendo esse convite, é porque você faz parte da nossa história. Dentre tantas pessoas incríveis, você foi selecionada para o momento mais importante das nossas vidas.
+                    </p>
                     <p className='white-text'>
-                        Você é mais do que um convidado, é um testemunho da nossa amorosa jornada. Vamos juntos celebrar com risadas, lágrimas e amor incondicional!
+                        Você é mais do que um convidado, é uma testemunha da nossa amorosa jornada. Vamos juntos celebrar com risadas, lágrimas e amor incondicional!
                     </p>
                     <p className='white-text'>
                         Vamos criar novos sonhos, compartilhar histórias e reafirmar a nossa promessa de amar até o fim.
                     </p>
-                    <p className='white-text'>                   
-                        Por favor, venha nos receber com os seus sorrisos e amor. Estamos ansiosos para celebrar com você e criar mais memórias inesquecíveis!
-                    </p>
                     <p className='white-text'>
-                        Com carinho, Mirla & Charlen
+                        Por favor, venha nos receber com os seus sorrisos e amor. Estamos ansiosos para celebrar com você e criar mais memórias inesquecíveis!<br/>&nbsp;
+                    <span className="big-quotes text-right"><br/>"</span>
                     </p>
-                </div>
-            </ScreenBlock>    
+                    <p className='white-text text-right w-full'>
+                        Com carinho. <br/>Mirla & Charlen
+                    </p>
+                </QuotedText>
+            </SepiaMask>
+        </ScreenBlock>
     </>
 }
