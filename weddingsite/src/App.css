@@ -31,6 +31,10 @@ body { height: 100%; }
     color: white !important;
 }
 
+A {
+    color: white !important;
+}
+
 .app {
     background-color: black;
 }
