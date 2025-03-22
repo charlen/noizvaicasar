@@ -3,7 +3,8 @@
     background-size: cover;
     background-position: 0% 70%;
     background-attachment: fixed;
-    width: 100%;
+    width: 100vw;
+    height: 100dvh;
 }
 
 @media screen and (max-width: 768px) {

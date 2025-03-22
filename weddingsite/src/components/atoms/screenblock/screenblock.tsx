@@ -13,7 +13,6 @@ export default function ScreenBlock({
          flex
          items-start 
          justify-center 
-         h-screen 
          p-0 
          m-0
          border-0

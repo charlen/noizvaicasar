@@ -1,0 +1,14 @@
+.p2 {
+    background-image: url('/images/p2_lg.jpg');
+    background-size: cover;
+    background-position: top;
+    width: 100vw;
+    height: 100dvh;
+}
+
+@media screen and (max-width: 768px) {
+    .p2 {
+        background-image: url('/images/p2_md.jpg');
+        background-size: cover;
+    }
+}
