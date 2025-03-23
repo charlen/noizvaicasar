@@ -40,7 +40,7 @@ export default function P5() {
     return <>
         <ScreenBlock className='p5 flex flex-col justify-center items-center w-full h-full'>
             <SepiaMask className='flex justify-center items-center flex-col'>
-                <div className="flex flex-col flex-1 justify-end items-center text-center w-full">
+                <div className="flex flex-col flex-1 justify-end items-center text-center w-full pb-10">
                     <DefaultButton onClick={gotoGiftList}> Lista de presentes </DefaultButton>
                     <DefaultButton onClick={goToConfirmationList}> Confirmar Presença </DefaultButton>
                     <LittleWhiteText className='text-2xl'>Quer nos dar um Presente em PIX? </LittleWhiteText>

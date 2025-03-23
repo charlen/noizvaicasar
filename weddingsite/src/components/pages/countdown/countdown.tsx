@@ -54,7 +54,7 @@ export default function P1() {
 
 
     return <>
-        <ScreenBlock className="screenbox flex flex-col justify-center items-center">
+        <ScreenBlock className="screenbox flex flex-col justify-center items-center header">
             <div className='flex flex-1/3 flex-col lg:flex-row w-full items-center justify-center lg:justify-start lg:pt-10'>
                 <div className="flex flex-col text-center lg:w-[50%]">
                     <TextBlock className='destaque mb-8 text-4xl lg:text-8xl mt-10'>Mirla & Charlen</TextBlock>
