@@ -42,8 +42,8 @@ export default function P5() {
                     <BigText> Confirmar Presença </BigText>
                 </div>
                 <div className='text-center flex flex-col h-[20%] w-full max-w-[500px]'>
-                    <LittleWhiteText className='text-2xl'>Para nossos amigos que querem nos presentear com Pix, <br />agradecemos com muito carinho também viu?</LittleWhiteText>
-                    <LittleWhiteText className='text-2xl'> Chave Aleatória: <br/>( Clique na chave para copiar )</LittleWhiteText>
+                    <LittleWhiteText className='text-2xl'>Quer nos dar um Presente em PIX? </LittleWhiteText>
+                    {/* <LittleWhiteText className='text-2xl'> Chave Aleatória: <br/>( Clique na chave para copiar )</LittleWhiteText> */}
                     <div className='w-full lg:text-4xl text-3xl mt-20 cursor-pointer link flex justify-center items-center text-center' onClick={copiarLink}> Copiar Chave PIX </div>
                     <LittleWhiteText id={"text-copied"}></LittleWhiteText>
                 </div>
