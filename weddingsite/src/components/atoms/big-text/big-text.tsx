@@ -5,5 +5,5 @@ export default function BigText({
     children?: React.ReactNode,
     className?: string
 }){
-    return <div className={`big-text text-4xl lg:text-6xl ${className}`}>{children}</div>
+    return <div className={`big-text text-4xl lg:text-4xl ${className}`}>{children}</div>
 }
