@@ -1,3 +1,3 @@
-export default function LittleWhiteText({ children, className }: { children: React.ReactNode, className?: string }) {
-    return <span className={`white-text text-center ${className}`}>{children}</span>
+export default function LittleWhiteText({ children, className, onclick, id }: { children?: React.ReactNode, id?: string, className?: string, onclick?: () => void }) {
+    return <span onClick={onclick} id={id} className={`white-text text-center ${className}`}>{children}</span>
 }

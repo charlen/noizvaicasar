@@ -73,7 +73,7 @@ export default function P1() {
                     </TextBlockGroup>
                 </div>
             </div>
-            <div className="flex h-[20%]">
+            <div className="hidden sm:flex sm:h-[20%] lg:h-[10%] self-baseline">
             </div>
         </ScreenBlock>
     </>
